@@ -1,0 +1,78 @@
+
+
+<!-- <ion-content padding>
+	<ion-list no-lines>
+		<ion-item *ngFor="let message of messagesList">
+			<h3>{{message.name}}</h3>
+			<p>{{message.message}}</p>
+		</ion-item>
+	</ion-list>
+</ion-content>
+<ion-footer>
+	<ion-item>
+		<ion-input type="text" placeholder="type here..." [(ngModel)]="newmessage"></ion-input>
+		<button ion-button clear item-right (click)="send()">Send</button>
+	</ion-item>
+</ion-footer> -->
+
+<body  style="overflow: auto;">
+	<div class="fixed-top header-top-bg" style="min-height:60px;">
+		<div class="container">
+			<div class="row justify-content-center">
+			  <div class="col-lg-12">
+				<div class="row">
+				  <div class="col-1"><button routerLink='/user-list'  class="back-arrow"><i class="fa fa-user"></i></button>
+				
+				</div>
+				<div class="col-11">
+					<p style="color: white;
+					margin-top: 17px">
+						{{OnlineCount}} - {{OnlineUsersName}}
+					</p>
+				</div>
+
+				
+				  
+				 
+				  </div>
+			  </div>
+			  </div>
+		  </div>
+		  </div>
+
+	  
+  <div class="container">
+  <div class="row justify-content-center">
+  
+	  <div class="col-md-12 chat-container" #scrollMe id="chatscrolls">
+	  
+		
+		  
+		  
+		
+		  <div *ngFor="let msg of messagesList">
+			  			
+				  <div *ngIf='msg.user.Name !=user.Name && msg.user.Mobile != user.Mobile' class="chatitem-left"><span>{{GetFirstName(msg.user.Name)}}</span> <font>{{msg.message}}</font></div>
+				  <div *ngIf='msg.user.Name ==user.Name && msg.user.Mobile == user.Mobile' class="chatitem-right"><font>{{msg.message}}</font></div>
+				  
+		  </div>
+		  
+		  
+		  
+	  </div>
+  </div>
+  </div>   
+	  
+  
+  
+  <div class="container fixed-bottom">
+  <div class="row justify-content-center">
+	  <div class="col-md-12">
+		  
+		  <div (keyup.enter)="send()" class="textarea-cons"><textarea [(ngModel)]="newmessage" name="" cols="" rows="" placeholder="Type Here..."></textarea> <button (click)="send()"><i class="fas fa-caret-right"></i></button></div>
+		  
+	  </div>
+  </div>
+  </div>
+  
+  </body>

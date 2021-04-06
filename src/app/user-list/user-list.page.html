@@ -1,0 +1,38 @@
+<body style="overflow: auto;">
+ 
+    <div class="fixed-top header-top-bg" style="min-height:60px;">
+    <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-1"><button routerLink='/home' routerDirection='back' class="back-arrow"><i class="fas fa-arrow-left"></i></button>
+              </div>
+              
+             
+              </div>
+          </div>
+          </div>
+      </div>
+      </div>
+      
+      
+      
+     
+  <div class="container mt-5 pt-4">
+  
+    
+  <div class="row justify-content-center">
+          <div *ngFor='let admin of UsersList' class="col-lg-6">
+      <div   class="user-list">
+            <i class="far fa-star"></i>
+            <h5> {{admin.Name}}</h5>
+             
+              <h6>{{admin.Mobile}}</h6>
+          </div>
+          </div>
+      </div>
+  </div>
+  
+  
+  
+  </body>

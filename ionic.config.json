@@ -1,0 +1,8 @@
+{
+  "name": "ChatMe",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
